@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GramVEDA< Care Desk</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="video.css">
+  <link rel="stylesheet" href="chat.css">
+</head>
+
+<body class="app-body">
+
+  <!-- Header -->
+  <header class="app-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">G</span>
+      <span>Gram<span>VEDA</span></span>
+    </a>
+
+    <div class="app-title">
+      <small>PHARMACY CARE POINT</small>
+      <strong>Lothe Medical Stores, Chimur</strong>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="care.html">Care desk</a>
+      <a href="professional.html">Professional portal</a>
+    </nav>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="app-shell">
+
+    <!-- Sidebar -->
+    <aside class="app-sidebar">
+      <p class="eyebrow">
+        <i></i>
+        Today's workspace
+      </p>
+
+      <button class="flow-nav active" data-view="intake">
+        <b>01</b>
+        Patient intake
+      </button>
+
+      <button class="flow-nav" data-view="vitals">
+        <b>02</b>
+        Vitals &amp; notes
+      </button>
+
+      <button class="flow-nav" data-view="request">
+        <b>03</b>
+        Doctor request
+      </button>
+
+      <button class="flow-nav" data-view="medicine">
+        <b>04</b>
+        Medicine network
+      </button>
+
+      <div class="sahayak-card">
+        <span>✦</span>
+        <strong>GramVEDA Sahayak</strong>
+        <p>Your practical guide for a safe, complete handoff.</p>
+        <button id="open-sahayak">Ask Sahayak →</button>
+      </div>
+    </aside>
+
+    <!-- Patient Flow -->
+    <section class="flow-stage">
+
+      <!-- Progress -->
+      <div class="progress">
+        <span class="done"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Patient Intake -->
+      <section class="flow-view active" id="intake">
+        <p class="eyebrow">
+          <i></i>
+          Step 1 of 4
+        </p>
+
+        <h1>Start a patient visit</h1>
+
+        <p class="lead">
+          Enter demo details to create a secure care session at this pharmacy.
+        </p>
+
+        <form id="intake-form" class="form-grid">
+
+          <label>
+            Patient name
+            <input
+              required
+              id="patient-name"
+              value="Ramesh Kumar"
+              placeholder="e.g. Ramesh Kumar"
+            >
+          </label>
+
+          <label>
+            Age
+            <input
+              required
+              id="patient-age"
+              type="number"
+              value="58"
+              min="1"
+              max="120"
+            >
+          </label>
+
+          <label>
+            Village
+            <input
+              required
+              id="patient-village"
+              value="Bhadson"
+              placeholder="Village name"
+            >
+          </label>
+
+          <label>
+            Preferred language
+            <select id="language">
+              <option>Punjabi</option>
+              <option>Hindi</option>
+              <option>English</option>
+            </select>
+          </label>
+
+          <label class="wide">
+            Reason for visit
+            <textarea id="reason" required>Mild dizziness since morning</textarea>
+          </label>
+
+          <label class="check wide">
+            <input type="checkbox" required checked>
+            <span>
+              I have explained that this is a demo workflow and obtained consent
+              for the care session.
+            </span>
+          </label>
+
+          <button class="btn btn-coral wide" type="submit">
+            Continue to vital signs
+            <span>→</span>
+          </button>
+
+        </form>
+      </section>
+
+      <!-- Vital Signs -->
+      <section class="flow-view" id="vitals">
+        <p class="eyebrow">
+          <i></i>
+          Step 2 of 4
+        </p>
+
+        <h1>Record vital signs</h1>
+
+        <p class="lead">
+          These details are shared with the doctor before the consultation begins.
+        </p>
+
+        <div class="vitals-grid app-vitals">
+          <label>
+            Blood pressure
+            <input id="bp" value="132 / 86 mmHg">
+          </label>
+
+          <label>
+            Blood sugar
+            <input id="sugar" value="148 mg/dL">
+          </label>
+
+          <label>
+            Temperature
+            <input id="temp" value="98.6 °F">
+          </label>
+
+          <label>
+            Pulse rate
+            <input id="pulse" value="76 bpm">
+          </label>
+        </div>
+
+        <label class="single-label">
+          Pharmacist observations
+          <textarea id="pharma-note">Patient is alert and oriented. Reports mild dizziness; no known drug allergies.</textarea>
+        </label>
+
+        <div class="button-row">
+          <button class="ghost-btn back">
+            ← Back
+          </button>
+
+          <button class="btn btn-dark" id="save-vitals">
+            Save &amp; find doctor
+            <span>→</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Doctor Request -->
+      <section class="flow-view" id="request">
+        <p class="eyebrow">
+          <i></i>
+          Step 3 of 4
+        </p>
+
+        <h1>Connecting to your doctor</h1>
+
+        <p class="lead" id="connection-copy">
+          Securely sharing vital signs and pharmacist observations with the
+          matched clinician.
+        </p>
+
+        <!-- Connection Status -->
+        <div class="connection-stage" id="connection-stage">
+          <div class="connection-people">
+
+            <div>
+              <span class="connection-avatar patient-avatar">RK</span>
+              <small>Patient</small>
+            </div>
+
+            <div class="connection-line">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+
+            <div>
+              <span class="connection-avatar doctor-avatar">AS</span>
+              <small>Dr. Arjun</small>
+            </div>
+
+          </div>
+
+          <div class="connection-message">
+            <span class="match-pulse">✚</span>
+
+            <p>
+              <strong id="connection-title">
+                Preparing care request
+              </strong>
+
+              <small id="connection-status">
+                Encrypting vitals and pharmacist notes
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Request Progress -->
+        <div class="request-track" id="request-track">
+
+          <div>
+            <b>1</b>
+            <p>
+              <strong>Request prepared</strong>
+              <small>Vitals and pharmacist notes attached</small>
+            </p>
+          </div>
+
+          <div>
+            <b>2</b>
+            <p>
+              <strong>Doctor notified</strong>
+              <small>Waiting for Dr. Arjun’s response</small>
+            </p>
+          </div>
+
+          <div>
+            <b>3</b>
+            <p>
+              <strong>Video room opens</strong>
+              <small>Patient and pharmacist can join</small>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Video Consultation -->
+        <div class="video-consult" id="video-consult">
+
+          <div class="video-frame">
+            <video
+              id="doctor-video"
+              muted
+              playsinline
+              controls
+              preload="metadata"
+            >
+              <source src="Doctors_Demo_Video.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+
+            <div class="live-chip">
+              ● LIVE DEMO
+            </div>
+
+            <div class="consult-timer">
+              <small>CONSULTATION TIME</small>
+              <strong id="consult-timer">00:00</strong>
+            </div>
+          </div>
+
+          <div class="consult-details">
+
+            <div>
+              <p class="eyebrow">
+                <i></i>
+                Doctor consultation
+              </p>
+
+              <h2>Dr. Arjun Singh</h2>
+
+              <p>
+                General Medicine · Connected via GramVEDA
+              </p>
+
+              <div class="consult-stats">
+                <span>
+                  <b id="network-stat">Excellent</b>
+                  Network
+                </span>
+
+                <span>
+                  <b>Punjabi</b>
+                  Language
+                </span>
+
+                <span>
+                  <b>132/86</b>
+                  BP shared
+                </span>
+              </div>
+            </div>
+
+            <button class="caption-toggle" id="caption-toggle">
+              CC Captions on
+            </button>
+
+          </div>
+
+          <!-- Live Captions -->
+          <div class="caption-box" id="caption-box">
+            <span>LIVE CAPTION</span>
+            <p id="caption-text">
+              Doctor has joined the consultation.
+            </p>
+          </div>
+
+          <button class="btn btn-dark" id="complete-demo">
+            Complete demo consultation
+            <span>→</span>
+          </button>
+
+        </div>
+
+        <div class="button-row">
+          <button class="ghost-btn back">
+            ← Back
+          </button>
+        </div>
+      </section>
+
+      <!-- Medicine Network -->
+      <section class="flow-view" id="medicine">
+        <p class="eyebrow">
+          <i></i>
+          Step 4 of 4
+        </p>
+
+        <h1>Fulfil the prescription</h1>
+
+        <p class="lead">
+          See local availability and send a request to nearby medicine nodes
+          when needed.
+        </p>
+
+        <!-- Prescription List -->
+        <div class="rx-list">
+
+          <div>
+            <span>Rx</span>
+
+            <p>
+              <strong>Betahistine 8 mg</strong>
+              <small>10 tablets · 1 tablet twice daily</small>
+            </p>
+
+            <em class="yes">In stock here</em>
+
+            <button class="mini-btn">
+              Add to bill
+            </button>
+          </div>
+
+          <div>
+            <span>Rx</span>
+
+            <p>
+              <strong>ORS sachets</strong>
+              <small>5 sachets · as needed</small>
+            </p>
+
+            <em class="node-tag">Node 02 · 3.2 km</em>
+
+            <button class="mini-btn node-request">
+              Request node
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Node Confirmation -->
+        <div class="node-confirm" id="node-confirm">
+          <span>⌖</span>
+
+          <p>
+            <strong>Asha Medical Node is ready to dispatch.</strong>
+            <br>
+            <small>Dummy request · Expected arrival 5:30 PM</small>
+          </p>
+        </div>
+
+        <div class="button-row">
+          <button class="ghost-btn back">
+            ← Back
+          </button>
+
+          <a class="btn btn-dark" href="professional.html">
+            View professional portal
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Sahayak Panel -->
+  <div class="sahayak-panel sahayak-chat" id="sahayak">
+
+    <button class="panel-close" aria-label="Close Sahayak">
+      ×
+    </button>
+
+    <p class="eyebrow">
+      <i></i>
+      GramVEDA Sahayak
+    </p>
+
+    <h2>Your care information guide</h2>
+
+    <p class="chat-disclaimer">
+      General health and medicine information only. Sahayak never diagnoses,
+      prescribes, recommends, or changes medicines.
+    </p>
+
+    <!-- Chat Thread -->
+    <div class="chat-thread" id="chat-thread" aria-live="polite">
+      <div class="chat-bubble bot">
+        Hello. I can explain general medicine information, help prepare
+        questions for the doctor, or describe the next care step.
+      </div>
+    </div>
+
+    <!-- Chat Suggestions -->
+    <div class="chat-suggestions">
+      <button>
+        What information should I give the doctor?
+      </button>
+
+      <button>
+        Explain a medicine label
+      </button>
+    </div>
+
+    <!-- Chat Form -->
+    <form class="chat-form" id="chat-form">
+      <label class="sr-only" for="chat-input">
+        Ask GramVEDA Sahayak
+      </label>
+
+      <input
+        id="chat-input"
+        maxlength="500"
+        placeholder="Ask a general health question…"
+        required
+      >
+
+      <button type="submit" aria-label="Send message">
+        ↑
+      </button>
+    </form>
+
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    Saved
+    <button>×</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+.connection-stage {
+  border: 1px solid #d7e5da;
+  border-radius: 13px;
+  padding: 25px;
+  background: #f1fbff;
+}
+
+.connection-people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.connection-people > div:not(.connection-line) {
+  text-align: center;
+}
+
+.connection-people small {
+  display: block;
+  margin-top: 7px;
+  font-size: 10px;
+  color: #607d74;
+}
+
+.connection-avatar {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font: bold 12px 'DM Mono';
+}
+
+.connection-avatar.patient-avatar {
+  background: #df9377;
+  color: #fff;
+}
+
+.connection-avatar.doctor-avatar {
+  background: #5e9982;
+  color: #fff;
+  box-shadow: 0 0 0 0 #5e998200;
+}
+
+.connection-line {
+  width: 150px;
+  height: 3px;
+  background: #d3e0d5;
+  border-radius: 4px;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.connection-line i {
+  width: 7px;
+  height: 7px;
+  background: #8db9a7;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+.connection-stage.connecting .connection-line i {
+  animation: travelling 1s infinite;
+}
+
+.connection-stage.connecting .connection-line i:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.connection-stage.connecting .connection-line i:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.connection-stage.connected .doctor-avatar {
+  animation: doctor-ring 1.5s infinite;
+}
+
+.connection-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.connection-message .match-pulse {
+  margin: 0;
+  width: 34px;
+  height: 34px;
+  font-size: 15px;
+  box-shadow: 0 0 0 6px #a3f4b6;
+}
+
+.connection-message p {
+  margin: 0;
+}
+
+.connection-message strong,
+.connection-message small {
+  display: block;
+}
+
+.connection-message strong {
+  font-size: 13px;
+}
+
+.connection-message small {
+  font-size: 11px;
+  color: #6d867e;
+  margin-top: 3px;
+}
+
+.video-consult {
+  display: none;
+  margin-top: 25px;
+  border: 1px solid #d6e3d9;
+  border-radius: 13px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.video-consult.show {
+  display: block;
+  animation: fade 0.35s;
+}
+
+.video-frame {
+  height: 300px;
+  position: relative;
+  background: #173b3a;
+}
+
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #173b3a;
+}
+
+.live-chip {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  border-radius: 13px;
+  padding: 6px 8px;
+  background: #173b3ae8;
+  color: #fff;
+  font: 10px 'DM Mono';
+}
+
+.consult-timer {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #f1fbffe8;
+  padding: 6px 9px;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.consult-timer small,
+.consult-timer strong {
+  display: block;
+}
+
+.consult-timer small {
+  font: 8px 'DM Mono';
+  color: #688279;
+}
+
+.consult-timer strong {
+  font: 600 15px 'DM Mono';
+  color: var(--ink);
+  margin-top: 3px;
+}
+
+.consult-details {
+  padding: 18px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.consult-details .eyebrow {
+  margin-bottom: 8px;
+}
+
+.consult-details h2 {
+  font: 600 23px Fraunces;
+  margin: 0;
+}
+
+.consult-details > div > p:not(.eyebrow) {
+  font-size: 12px;
+  color: #658079;
+  margin: 4px 0;
+}
+
+.consult-stats {
+  display: flex;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.consult-stats span {
+  padding: 7px 9px;
+  background: #f1fbff;
+  border-radius: 6px;
+  font-size: 9px;
+  color: #71887f;
+}
+
+.consult-stats b {
+  display: block;
+  font-size: 11px;
+  color: #294e47;
+  margin-bottom: 3px;
+}
+
+.caption-toggle {
+  border: 1px solid #b9d1c3;
+  background: #fff;
+  border-radius: 7px;
+  color: #47776a;
+  padding: 8px 10px;
+  font: 600 11px 'DM Sans';
+  cursor: pointer;
+}
+
+.caption-box {
+  display: flex;
+  gap: 11px;
+  align-items: start;
+  margin: 0 20px 16px;
+  padding: 11px;
+  background: #f4e88f;
+  border-radius: 8px;
+}
+
+.caption-box.off {
+  display: none;
+}
+
+.caption-box span {
+  font: 9px 'DM Mono';
+  color: #9a691b;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.caption-box p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #5f604c;
+  margin: 0;
+}
+
+.video-consult > .btn {
+  margin: 0 20px 20px;
+  width: calc(100% - 40px);
+}
+
+@keyframes travelling {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes doctor-ring {
+  50% {
+    box-shadow: 0 0 0 9px #5e998230;
+  }
+}
+
+@media (max-width: 530px) {
+  .connection-line {
+    width: 85px;
+  }
+
+  .video-frame {
+    height: 220px;
+  }
+
+  .consult-details {
+    display: block;
+  }
+
+  .caption-toggle {
+    margin-top: 10px;
+  }
+
+  .consult-stats {
+    flex-wrap: wrap;
+  }
+}

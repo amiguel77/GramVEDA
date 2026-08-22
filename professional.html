@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GramVEDA Professional Portal</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="workspace.css" />
+  </head>
+
+  <body class="app-body professional-body">
+
+    <!-- Header -->
+    <header class="app-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">S</span>
+        <span>San<span>JIVNI</span></span>
+      </a>
+
+      <div class="app-title">
+        <small>PROFESSIONAL PORTAL</small>
+        <strong>Dr. Arjun Singh · General Medicine</strong>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="care.html">Care desk</a>
+        <a class="active" href="professional.html">Professional portal</a>
+      </nav>
+    </header>
+
+    <!-- Professional Portal -->
+    <main class="portal-shell">
+
+      <!-- Doctor Sidebar -->
+      <aside class="doctor-sidebar">
+
+        <div class="doctor-id">
+          <span>AS</span>
+
+          <p>
+            <strong>Dr. Arjun Singh</strong>
+            <small>Available for consults</small>
+          </p>
+
+          <i>●</i>
+        </div>
+
+        <button class="portal-link active" data-portal="queue">
+          ◉ Care queue
+          <b id="queue-count">1</b>
+        </button>
+
+        <button class="portal-link" data-portal="today">
+          ▣ Today’s visits
+        </button>
+
+        <button class="portal-link" data-portal="guidance">
+          ✦ Sahayak guidance
+        </button>
+
+        <div class="portal-note">
+          All records shown here are fictional demo data.
+        </div>
+
+      </aside>
+
+      <!-- Portal Content -->
+      <section class="portal-content">
+
+        <!-- Care Queue -->
+        <section class="portal-view active" id="queue">
+
+          <div class="portal-head">
+            <div>
+              <p class="eyebrow">
+                <i></i>
+                Live queue
+              </p>
+
+              <h1>One patient is waiting</h1>
+            </div>
+
+            <span class="availability-toggle">
+              ● Available
+            </span>
+          </div>
+
+          <!-- Incoming Patient -->
+          <article class="incoming-card" id="incoming">
+
+            <div class="incoming-top">
+
+              <span class="patient-avatar">
+                RK
+              </span>
+
+              <div>
+                <h2>
+                  Ramesh Kumar
+                  <small>58 yrs · Bhadson</small>
+                </h2>
+
+                <p>
+                  Requested from Sunrise Medical Store · 2 mins ago
+                </p>
+              </div>
+
+              <span class="new-badge">
+                NEW REQUEST
+              </span>
+
+            </div>
+
+            <!-- Patient Summary -->
+            <div class="summary-grid">
+
+              <div>
+                <small>PRIMARY CONCERN</small>
+                <strong>Mild dizziness</strong>
+              </div>
+
+              <div>
+                <small>BP</small>
+                <strong>132 / 86</strong>
+              </div>
+
+              <div>
+                <small>SUGAR</small>
+                <strong>148 mg/dL</strong>
+              </div>
+
+              <div>
+                <small>LANGUAGE</small>
+                <strong>Punjabi</strong>
+              </div>
+
+            </div>
+
+            <!-- Pharmacist Handoff -->
+            <div class="pharma-handoff">
+              <span>✦</span>
+
+              <p>
+                <strong>Pharmacist handoff</strong>
+                <br />
+                Patient is alert. Mild dizziness since morning.
+                No known drug allergies.
+              </p>
+            </div>
+
+            <!-- Request Actions -->
+            <div class="card-actions">
+              <button class="ghost-btn" id="decline">
+                Decline
+              </button>
+
+              <button class="btn btn-coral" id="accept">
+                Accept &amp; open video room
+                <span>↗</span>
+              </button>
+            </div>
+
+          </article>
+
+          <!-- Consultation Room -->
+          <div class="consult-room" id="consult-room">
+
+            <div class="call-stage">
+
+              <div class="call-person patient">
+                <span>RK</span>
+
+                <p>
+                  Ramesh Kumar
+                  <br />
+                  <small>with pharmacist</small>
+                </p>
+              </div>
+
+              <div class="call-person doctor">
+                <span>AS</span>
+
+                <p>
+                  Dr. Arjun Singh
+                  <br />
+                  <small>you</small>
+                </p>
+              </div>
+
+              <div class="call-status">
+                ● Secure consultation in progress · 08:42
+              </div>
+
+            </div>
+
+            <!-- Consultation Actions -->
+            <div class="consult-actions">
+
+              <div>
+
+                <label>
+                  Clinical notes
+
+                  <textarea id="doctor-notes">Hydration advice given. Review symptoms after medication.</textarea>
+                </label>
+
+                <label>
+                  Prescription summary
+
+                  <input
+                    id="prescription"
+                    value="Betahistine 8 mg · ORS sachets"
+                  />
+                </label>
+
+              </div>
+
+              <button class="btn btn-dark" id="complete-consult">
+                Complete &amp; send prescription
+                <span>→</span>
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- Today's Visits -->
+        <section class="portal-view" id="today">
+
+          <p class="eyebrow">
+            <i></i>
+            Today
+          </p>
+
+          <h1>Visits at a glance</h1>
+
+          <div class="visit-table">
+
+            <div>
+              <span>09:20</span>
+
+              <p>
+                <strong>Ramesh Kumar</strong>
+                <small>Awaiting consultation</small>
+              </p>
+
+              <em>In queue</em>
+            </div>
+
+            <div>
+              <span>08:10</span>
+
+              <p>
+                <strong>Amarjit Kaur</strong>
+                <small>Fever follow-up</small>
+              </p>
+
+              <em class="complete">Completed</em>
+            </div>
+
+            <div>
+              <span>07:35</span>
+
+              <p>
+                <strong>Gurpreet Singh</strong>
+                <small>BP review</small>
+              </p>
+
+              <em class="complete">Completed</em>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- Sahayak Guidance -->
+        <section class="portal-view" id="guidance">
+
+          <p class="eyebrow">
+            <i></i>
+            Sahayak guidance
+          </p>
+
+          <h1>Support for each consultation</h1>
+
+          <div class="guidance-grid">
+
+            <article>
+              <span>01</span>
+
+              <h3>Review handoff first</h3>
+
+              <p>
+                Look at vitals, chief concern, and allergy status
+                before accepting.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+
+              <h3>Use clear language</h3>
+
+              <p>
+                Confirm the patient understands the plan in their
+                preferred language.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+
+              <h3>Close the loop</h3>
+
+              <p>
+                Send the prescription to the pharmacist and document
+                follow-up advice.
+              </p>
+            </article>
+
+          </div>
+
+        </section>
+
+      </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+      Saved
+
+      <button>×</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+
+  </body>
+</html>

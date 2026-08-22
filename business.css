@@ -1,0 +1,201 @@
+/* The interactive workspaces live on their own pages; the home page remains a partner-facing overview. */
+/*-- Demo Visibility -- */
+.demo-wrap {
+  display: none;
+}
+
+/*-- Business Platform -- */
+.business-platform {
+  background: #e0f0ff;
+  padding: 105px 0;
+}
+
+/*-- Business Introduction -- */
+.business-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+
+.business-intro h2,
+.operating h2 {
+  font: 600 52px / 0.98 Fraunces, Georgia, serif;
+  margin: 0;
+  letter-spacing: -2.6px;
+}
+
+.business-intro h2 em,
+.operating h2 em {
+  font-weight: 500;
+  color: #4d8f7b; /* kept — #a3f4b6 is too pale to read as text on white/light bg */
+}
+
+.business-intro > p:last-child {
+  font-size: 16px;
+  color: #55766d;
+  line-height: 1.7;
+  margin: 0 0 5px;
+}
+
+/*-- Partner Grid -- */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 44px;
+}
+
+.partner-grid article {
+  background: #f1fbff;
+  padding: 25px;
+  border-radius: 13px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-- Partner Icons -- */
+.partner-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f69384;
+  color: #fff;
+  font-size: 22px;
+}
+
+.partner-grid article:nth-child(2) .partner-icon {
+  background: #a3f4b6;
+}
+
+.partner-grid article:nth-child(3) .partner-icon {
+  background: #f4e88f;
+}
+
+/*-- Partner Content -- */
+.partner-grid small {
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 0.7px;
+  color: #67857b;
+  margin-top: 22px;
+}
+
+.partner-grid h3 {
+  font: 600 22px / 1.1 Fraunces, Georgia, serif;
+  margin: 9px 0;
+}
+
+.partner-grid p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #617b73;
+  margin: 0;
+}
+
+.partner-grid a {
+  margin-top: auto;
+  padding-top: 17px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/*-- Operating Section -- */
+.operating {
+  padding: 112px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 95px;
+}
+
+.operating-copy > p:not(.eyebrow) {
+  color: #617b73;
+  line-height: 1.65;
+  font-size: 16px;
+  max-width: 420px;
+  margin: 21px 0 27px;
+}
+
+/*-- Operating List -- */
+.operating-list {
+  border-top: 1px solid var(--line);
+}
+
+.operating-list article {
+  display: flex;
+  gap: 19px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.operating-list b {
+  font: 11px 'DM Mono', monospace;
+  color: #f69384;
+  padding-top: 4px;
+}
+
+.operating-list h3 {
+  font: 600 20px Fraunces, Georgia, serif;
+  margin: 0 0 6px;
+}
+
+.operating-list p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #617b73;
+  margin: 0;
+}
+
+/*-- Footer Links -- */
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  color: #b8cdc4;
+  text-decoration: none;
+}
+
+/*-- Tablet and Mobile -- */
+@media (max-width: 780px) {
+  .business-platform {
+    padding: 75px 0;
+  }
+
+  .business-intro,
+  .operating {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-grid article {
+    min-height: 210px;
+  }
+
+  .operating {
+    gap: 46px;
+    padding: 75px 0;
+  }
+
+  .business-intro h2,
+  .operating h2 {
+    font-size: 42px;
+  }
+}
+
+/*-- Small Mobile -- */
+@media (max-width: 470px) {
+  .footer-links {
+    display: none;
+  }
+}
