@@ -104,11 +104,17 @@ Significantly minimizes carbon footprints by reducing fuel consumption associate
 
 ## Made by
 
-[Harsh](https://instaggram.com/chvxra_lx)
-[Sanjay](https://instagram.com/USERNAME2)
+[Harsh](https://instagram.com/chvxra_lx)
+
+[Sanjay](https://instagram.com/s4njayjaat_)
+
 [Prachi](https://instagram.com/prachi_bumiyar)
+
 [Ujjwal](https://instagram.com/ujjwal_guptta)
-[Khushi](https://instagram.com/_khushi.gulati_)
+
+[Khushi
+(https://instagram.com/_khushi.gulati_)
+
 [Jahnavi](https://instagram.com/jahnavi_2310)
 
 **Smart India Hackathon 2026**
