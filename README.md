@@ -112,8 +112,7 @@ Significantly minimizes carbon footprints by reducing fuel consumption associate
 
 [Ujjwal](https://instagram.com/ujjwal_guptta)
 
-[Khushi
-(https://instagram.com/_khushi.gulati_)
+[Khushi](https://instagram.com/_khushi.gulati_)
 
 [Jahnavi](https://instagram.com/jahnavi_2310)
 
