@@ -1,4 +1,4 @@
-/*-- Home Bot Button -- */
+/* -- Home Bot Button -- */
 .home-bot-button {
   position: fixed;
   right: 25px;
@@ -37,7 +37,7 @@
   font-style: normal;
 }
 
-/*-- Home Bot Panel -- */
+/* -- Home Bot Panel -- */
 .home-bot {
   position: fixed;
   right: 25px;
@@ -68,7 +68,7 @@
   margin: 10px 0 13px;
 }
 
-/*-- Home Bot Close Button -- */
+/* -- Home Bot Close Button -- */
 .home-bot-close {
   position: absolute;
   top: 8px;
@@ -80,7 +80,7 @@
   cursor: pointer;
 }
 
-/*-- Home Chat Thread -- */
+/* -- Home Chat Thread -- */
 .home-chat-thread {
   height: 235px;
   overflow-y: auto;
@@ -90,7 +90,7 @@
   padding: 2px;
 }
 
-/*-- Home Chat Bubbles -- */
+/* -- Home Chat Bubbles -- */
 .home-chat-bubble {
   max-width: 89%;
   padding: 10px 11px;
@@ -118,7 +118,7 @@
   color: #638077;
 }
 
-/*-- Home Chat Form -- */
+/* -- Home Chat Form -- */
 .home-chat-form {
   display: flex;
   gap: 7px;
@@ -147,7 +147,7 @@
   cursor: pointer;
 }
 
-/*-- Home Bot Animation -- */
+/* -- Home Bot Animation -- */
 @keyframes homeBotIn {
   from {
     opacity: 0;
@@ -160,7 +160,7 @@
   }
 }
 
-/*-- Small Screens -- */
+/* -- Small Screens -- */
 @media (max-width: 530px) {
   .home-bot-button {
     right: 13px;
