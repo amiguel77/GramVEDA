@@ -1,16 +1,16 @@
 /* The interactive workspaces live on their own pages; the home page remains a partner-facing overview. */
-/*-- Demo Visibility -- */
+/* -- Demo Visibility -- */
 .demo-wrap {
   display: none;
 }
 
-/*-- Business Platform -- */
+/* -- Business Platform -- */
 .business-platform {
   background: #e0f0ff;
   padding: 105px 0;
 }
 
-/*-- Business Introduction -- */
+/* -- Business Introduction -- */
 .business-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,7 +28,7 @@
 .business-intro h2 em,
 .operating h2 em {
   font-weight: 500;
-  color: #4d8f7b; /* kept — #a3f4b6 is too pale to read as text on white/light bg */
+  color: #4d8f7b;
 }
 
 .business-intro > p:last-child {
@@ -38,7 +38,7 @@
   margin: 0 0 5px;
 }
 
-/*-- Partner Grid -- */
+/* -- Partner Grid -- */
 .partner-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,7 +55,7 @@
   flex-direction: column;
 }
 
-/*-- Partner Icons -- */
+/* -- Partner Icons -- */
 .partner-icon {
   display: grid;
   place-items: center;
@@ -75,7 +75,7 @@
   background: #f4e88f;
 }
 
-/*-- Partner Content -- */
+/* -- Partner Content -- */
 .partner-grid small {
   font: 10px 'DM Mono', monospace;
   letter-spacing: 0.7px;
@@ -104,7 +104,7 @@
   text-decoration: none;
 }
 
-/*-- Operating Section -- */
+/* -- Operating Section -- */
 .operating {
   padding: 112px 0;
   display: grid;
@@ -120,7 +120,7 @@
   margin: 21px 0 27px;
 }
 
-/*-- Operating List -- */
+/* -- Operating List -- */
 .operating-list {
   border-top: 1px solid var(--line);
 }
@@ -150,7 +150,7 @@
   margin: 0;
 }
 
-/*-- Footer Links -- */
+/* -- Footer Links -- */
 .footer-links {
   display: flex;
   gap: 18px;
@@ -162,7 +162,7 @@
   text-decoration: none;
 }
 
-/*-- Tablet and Mobile -- */
+/* -- Tablet and Mobile -- */
 @media (max-width: 780px) {
   .business-platform {
     padding: 75px 0;
@@ -193,7 +193,7 @@
   }
 }
 
-/*-- Small Mobile -- */
+/* -- Small Mobile -- */
 @media (max-width: 470px) {
   .footer-links {
     display: none;
