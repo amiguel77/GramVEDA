@@ -1,5 +1,5 @@
 (async () => {
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { session } } = await sb.auth.getSession();
   const navLinks = document.querySelector('.nav nav');
   if (!navLinks) return;
 
