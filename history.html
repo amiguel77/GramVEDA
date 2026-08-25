@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My History — GramVEDA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">G</span>
+      <span>Gram<span>VEDA</span></span>
+    </a>
+  </header>
+
+  <main class="auth-wrap" style="align-items:stretch;">
+    <div style="width:100%;max-width:700px;margin:0 auto;">
+      <h1 style="font:600 32px/1.1 Fraunces, Georgia, serif;color:var(--ink);margin-bottom:20px;">
+        My Health History
+      </h1>
+
+      <div id="historyList"></div>
+      <p id="emptyState" style="display:none;color:var(--muted);text-align:center;padding:40px 0;">
+        No visits recorded yet.
+      </p>
+
+      <a href="profile.html" class="text-link" style="display:inline-block;margin-top:20px;">← Back to profile</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="supabaseClient.js"></script>
+  <script src="history.js"></script>
+</body>
+</html>
