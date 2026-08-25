@@ -1,7 +1,7 @@
-/*-- Fonts -- */
+/* -- Fonts -- */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
 
-/*-- Root Variables -- */
+/* -- Root Variables -- */
 :root {
   --ink: #173b3a;
   --muted: #55706d;
@@ -14,7 +14,7 @@
   --line: #d9e0d5;
 }
 
-/*-- Base -- */
+/* -- Base -- */
 * {
   box-sizing: border-box;
 }
@@ -30,7 +30,7 @@ body {
   font-family: 'DM Sans', Arial, sans-serif;
 }
 
-/*-- Noise Overlay -- */
+/* -- Noise Overlay -- */
 .noise {
   position: fixed;
   inset: 0;
@@ -40,13 +40,13 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
 }
 
-/*-- Layout -- */
+/* -- Layout -- */
 .shell {
   width: min(1160px, calc(100% - 48px));
   margin: auto;
 }
 
-/*-- Navigation -- */
+/* -- Navigation -- */
 .nav {
   height: 88px;
   background: #e0f0ff;
@@ -95,7 +95,7 @@ body {
   font-weight: 600;
 }
 
-/*-- Buttons -- */
+/* -- Buttons -- */
 .btn {
   border: 0;
   cursor: pointer;
@@ -125,7 +125,7 @@ body {
   color: #fff;
 }
 
-/*-- Hero -- */
+/* -- Hero -- */
 .hero {
   min-height: 590px;
   display: grid;
@@ -239,7 +239,7 @@ h2 em {
   background: #9a87ba;
 }
 
-/*-- Hero Visual -- */
+/* -- Hero Visual -- */
 .hero-visual {
   height: 480px;
   background: #E0F0FF;
@@ -280,7 +280,7 @@ h2 em {
   left: -155px;
 }
 
-/*-- Phone Mockup -- */
+/* -- Phone Mockup -- */
 .phone {
   position: absolute;
   width: 194px;
@@ -369,7 +369,7 @@ h2 em {
   color: #fff;
 }
 
-/*-- Care Cards -- */
+/* -- Care Cards -- */
 .care-card {
   position: absolute;
   z-index: 3;
@@ -437,7 +437,7 @@ h2 em {
   font-weight: bold;
 }
 
-/*-- Floating Visual Details -- */
+/* -- Floating Visual Details -- */
 .float-dot {
   position: absolute;
   border-radius: 50%;
@@ -478,7 +478,7 @@ h2 em {
   z-index: 2;
 }
 
-/*-- Ticker -- */
+/* -- Ticker -- */
 .ticker {
   overflow: hidden;
   background: var(--ink);
@@ -506,7 +506,7 @@ h2 em {
   }
 }
 
-/*-- Story -- */
+/* -- Story -- */
 .story {
   padding: 114px 0;
   display: grid;
@@ -531,7 +531,7 @@ h2 em {
   margin: 0 0 28px;
 }
 
-/*-- Steps -- */
+/* -- Steps -- */
 .steps {
   grid-column: 1 / -1;
   display: grid;
@@ -586,7 +586,7 @@ h2 em {
   max-width: 265px;
 }
 
-/*-- Demo Section -- */
+/* -- Demo Section -- */
 .demo-wrap {
   background: #E0F0FF;
   padding: 92px 0;
@@ -608,7 +608,7 @@ h2 em {
   color: #5f8278;
 }
 
-/*-- Desktop Mockup -- */
+/* -- Desktop Mockup -- */
 .desk {
   background: var(--paper);
   border-radius: 17px;
@@ -619,7 +619,7 @@ h2 em {
   min-height: 430px;
 }
 
-/*-- Sidebar -- */
+/* -- Sidebar -- */
 .side-panel {
   background: #f1fbff;
   padding: 23px 14px;
@@ -692,7 +692,7 @@ h2 em {
   color: #739389;
 }
 
-/*-- Dashboard Main -- */
+/* -- Dashboard Main -- */
 .desk-main {
   padding: 0 34px 27px;
 }
@@ -723,7 +723,7 @@ h2 em {
   color: #3d8a6e;
 }
 
-/*-- Dashboard Tabs -- */
+/* -- Dashboard Tabs -- */
 .tab-content {
   display: none;
   padding-top: 28px;
@@ -733,7 +733,7 @@ h2 em {
   display: block;
 }
 
-/*-- Vitals -- */
+/* -- Vitals -- */
 .vitals-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -757,7 +757,7 @@ h2 em {
   outline-color: #72ae99;
 }
 
-/*-- Clinician Note -- */
+/* -- Clinician Note -- */
 .clinician-note {
   margin: 20px 0;
   display: flex;
@@ -785,7 +785,7 @@ h2 em {
   line-height: 1.4;
 }
 
-/*-- Consultation -- */
+/* -- Consultation -- */
 .consult-view {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -836,7 +836,7 @@ h2 em {
   margin-bottom: 18px;
 }
 
-/*-- Prescription -- */
+/* -- Prescription -- */
 .rx-title {
   display: flex;
   justify-content: space-between;
@@ -904,7 +904,7 @@ h2 em {
   color: #a87115;
 }
 
-/*-- Route -- */
+/* -- Route -- */
 .node-route {
   display: flex;
   gap: 11px;
@@ -929,7 +929,7 @@ h2 em {
   color: #6d867f;
 }
 
-/*-- Impact -- */
+/* -- Impact -- */
 .impact {
   padding: 112px 0;
   display: grid;
@@ -966,7 +966,7 @@ h2 em {
   color: var(--muted);
 }
 
-/*-- Footer -- */
+/* -- Footer -- */
 footer {
   background: var(--ink);
   color: #e0f0ff;
@@ -998,7 +998,7 @@ footer .brand-mark {
   filter: brightness(0) invert(1) opacity(0.85);
 }
 
-/*-- Modal -- */
+/* -- Modal -- */
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -1045,7 +1045,7 @@ footer .brand-mark {
   color: var(--ink);
 }
 
-/*-- Toast -- */
+/* -- Toast -- */
 .toast {
   position: fixed;
   z-index: 30;
@@ -1076,7 +1076,7 @@ footer .brand-mark {
   cursor: pointer;
 }
 
-/*-- Auth Pages -- */
+/* -- Auth Pages -- */
 .auth-wrap {
   min-height: calc(100vh - 88px);
   display: flex;
@@ -1157,7 +1157,7 @@ footer .brand-mark {
   text-decoration: none;
 }
 
-/*-- Tablet and Mobile -- */
+/* -- Tablet and Mobile -- */
 @media (max-width: 780px) {
   .nav nav {
     display: none;
@@ -1288,7 +1288,7 @@ footer .brand-mark {
   margin: 12px auto 0;
 }
 
-/*-- Small Mobile -- */
+/* -- Small Mobile -- */
 @media (max-width: 470px) {
   .shell {
     width: min(100% - 30px, 1160px);
