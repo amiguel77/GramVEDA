@@ -1,7 +1,7 @@
-/*-- Home Sahayak State -- */
+// Home Sahayak State
 const homeBotHistory = [];
 
-/*-- Safe Demo Reply -- */
+// Safe Demo Reply
 const homeSafeReply = (message) => {
   if (
     /chest pain|trouble breathing|shortness of breath|fainted|unconscious|seizure|stroke|severe bleeding|suicidal/i.test(
@@ -26,7 +26,7 @@ const homeSafeReply = (message) => {
   return 'For a useful doctor consultation, share when the concern started, what makes it better or worse, relevant allergies, existing conditions and medicines already being used. A clinician should assess symptoms before treatment decisions.';
 };
 
-/*-- Home Chat Bubble -- */
+// Home Chat Bubble
 const addHomeBubble = (text, role) => {
   const thread = document.querySelector('#home-chat-thread');
   const bubble = document.createElement('div');
@@ -38,21 +38,21 @@ const addHomeBubble = (text, role) => {
   thread.scrollTop = thread.scrollHeight;
 };
 
-/*-- Open Home Sahayak -- */
+// Open Home Sahayak
 document
   .querySelector('#home-bot-button')
   ?.addEventListener('click', () => {
     document.querySelector('#home-bot').classList.add('show');
   });
 
-/*-- Close Home Sahayak -- */
+// Close Home Sahayak
 document
   .querySelector('.home-bot-close')
   ?.addEventListener('click', () => {
     document.querySelector('#home-bot').classList.remove('show');
   });
 
-/*-- Home Chat Form -- */
+// Home Chat Form
 document
   .querySelector('#home-chat-form')
   ?.addEventListener('submit', async (event) => {
