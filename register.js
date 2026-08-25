@@ -13,7 +13,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Creating account...';
 
-  const { data, error } = await supabase.auth.signUp({
+  const { data, error } = await sb.auth.signUp({
     email,
     password,
     options: {
