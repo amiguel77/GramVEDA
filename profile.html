@@ -14,25 +14,57 @@
   </header>
 
   <main class="auth-wrap">
-    <form id="profileForm" class="auth-form">
-      <h1>My Profile</h1>
+    <div class="auth-form" id="profileCard">
 
-      <label for="name">Full name</label>
-      <input type="text" id="name" required>
+      <!-- VIEW MODE -->
+      <div id="viewMode">
+        <h1>My Profile</h1>
 
-      <label for="phone">Phone number</label>
-      <input type="tel" id="phone">
+        <div class="profile-row">
+          <span class="profile-label">Full name</span>
+          <span class="profile-value" id="viewName">—</span>
+        </div>
 
-      <label>Role</label>
-      <input type="text" id="role" disabled>
+        <div class="profile-row">
+          <span class="profile-label">Phone number</span>
+          <span class="profile-value" id="viewPhone">—</span>
+        </div>
 
-      <label>Email</label>
-      <input type="email" id="email" disabled>
+        <div class="profile-row">
+          <span class="profile-label">Role</span>
+          <span class="profile-value" id="viewRole">—</span>
+        </div>
 
-      <button type="submit" class="btn btn-coral">Save changes</button>
-      <p id="formError" class="form-error"></p>
-      <p id="formSuccess" class="form-success"></p>
-    </form>
+        <div class="profile-row">
+          <span class="profile-label">Email</span>
+          <span class="profile-value" id="viewEmail">—</span>
+        </div>
+
+        <button id="editBtn" class="btn btn-coral">Edit Profile</button>
+      </div>
+
+      <!-- EDIT MODE (hidden until Edit is clicked) -->
+      <form id="profileForm" style="display:none;">
+        <h1>Edit Profile</h1>
+
+        <label for="name">Full name</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone">
+
+        <label>Role</label>
+        <input type="text" id="role" disabled>
+
+        <label>Email</label>
+        <input type="email" id="email" disabled>
+
+        <button type="submit" class="btn btn-coral">Save changes</button>
+        <button type="button" id="cancelBtn" class="btn" style="background:transparent;border:1px solid var(--line);color:var(--ink);margin-top:8px;">Cancel</button>
+        <p id="formError" class="form-error"></p>
+      </form>
+
+    </div>
 
     <a href="history.html" class="btn btn-dark" style="margin-top:16px;width:100%;max-width:400px;text-align:center;text-decoration:none;">
       View my history
@@ -43,10 +75,8 @@
     </button>
   </main>
 
-  <script src="https://js-de.sentry-cdn.com/a9dd01a8f0321dbbdcbc3c8c55d454b8.min.js" crossorigin="anonymous"></script>
-  <script src="sentry.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="supabaseClient.js"></script>
-  <script src="profile.js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/profile.js"></script>
 </body>
 </html>
