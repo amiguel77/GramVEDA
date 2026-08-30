@@ -48,6 +48,15 @@ body {
   padding: 0 40px;
 }
 
+.hero,
+.story,
+.demo-wrap > .shell,
+.impact {
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* -- Navigation -- */
 .nav {
   height: 88px;
