@@ -42,8 +42,10 @@ body {
 
 /* -- Layout -- */
 .shell {
-  width: min(1160px, calc(100% - 48px));
-  margin: auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* -- Navigation -- */
