@@ -50,7 +50,8 @@ body {
 
 .hero,
 .story,
-.demo-wrap > .shell,
+.demo-wrap
+.side-panel > .shell,
 .impact {
   width: 97%;
   margin-left: auto;
